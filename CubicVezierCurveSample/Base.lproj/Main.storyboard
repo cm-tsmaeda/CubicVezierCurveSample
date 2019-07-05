@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CubicVezierCurveSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rmi-ND-Pw0" userLabel="animationContainerView">
+                                <rect key="frame" x="0.0" y="488" width="320" height="80"/>
+                                <color key="backgroundColor" white="0.91614940068493156" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="MjL-fi-Yi1"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kYz-DJ-Ihg">
+                                <rect key="frame" x="0.0" y="20" width="320" height="468"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="3ZA-z3-x1h"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="yHj-Zy-g9V"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rmi-ND-Pw0" secondAttribute="bottom" id="1BS-wX-Ete"/>
+                            <constraint firstItem="kYz-DJ-Ihg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7mW-6s-aaA"/>
+                            <constraint firstItem="rmi-ND-Pw0" firstAttribute="top" secondItem="kYz-DJ-Ihg" secondAttribute="bottom" id="MBD-4k-EnA"/>
+                            <constraint firstItem="kYz-DJ-Ihg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NMD-td-8g1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rmi-ND-Pw0" secondAttribute="trailing" id="bps-v5-aUn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kYz-DJ-Ihg" secondAttribute="trailing" id="jFv-G2-FBf"/>
+                            <constraint firstItem="rmi-ND-Pw0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="n9x-aw-tGe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="animationContainerView" destination="rmi-ND-Pw0" id="nUE-7l-uXJ"/>
+                        <outlet property="timingCurveListTableView" destination="kYz-DJ-Ihg" id="jPX-Tk-Cwv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.875" y="30.633802816901408"/>
+        </scene>
+    </scenes>
+</document>
